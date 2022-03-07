@@ -1,1 +1,1 @@
-# Lab-TSC
+# Laborator TSC
