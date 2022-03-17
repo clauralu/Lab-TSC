@@ -1,6 +1,6 @@
-../../lab2/lab_dut/instr_register_pkg.sv   	                +incdir+../../lab_dut
-../../lab2/lab_dut/instr_register.sv   	                +incdir+../../lab_dut
+../../lab2/dut/instr_register_pkg.sv   	                +incdir+../../dut
+../../lab2/dut/instr_register.sv   	                +incdir+../../dut
 
-../lab01_testbench-interface/instr_register_test.sv          +incdir+../lab01_testbench-interface
-../lab01_testbench-interface/tb_ifc.sv                    +incdir+../lab01_testbench-interface
-../lab01_testbench-interface/top.sv                    +incdir+../lab01_testbench-interface
+../test/instr_register_test.sv          +incdir+../test
+../test/tb_ifc.sv                    +incdir+../test
+../test/top.sv                    +incdir+../test
