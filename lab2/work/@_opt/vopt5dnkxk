@@ -1,0 +1,124 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\lab\lab_TSC\lab2
+T_opt
+Z1 V_BnZ?9OiA0?UDld=Y@mik3
+Z2 04 3 4 work top fast 0
+Z3 =1-0c9d922f6717-622f2cd3-372-ce8
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OE;O;6.6d;45
+Z7 dD:\lab\lab_TSC\lab2
+vinstr_register
+Z8 Mx1 24 C:\modeltech_6.6d\sv_std 3 std
+Z9 DXx24 C:\modeltech_6.6d\sv_std 3 std 0 22 WnQ=;W1X^o9K1PIQTgInR3
+Z10 Mx2 24 D:\lab\lab_TSC\lab2\work 18 instr_register_pkg
+Z11 DXx24 D:\lab\lab_TSC\lab2\work 18 instr_register_pkg 0 22 :JTF@fFZEAY;_aRJ`=BP83
+Z12 V3z9A3Eb_VM7O2iR_@`ig80
+r1
+31
+Z13 Izlgh4QQ_5WV`>EDVk6A=21
+S1
+R7
+Z14 w1647253332
+Z15 8D:/lab/lab_TSC/lab2/lab_dut/instr_register.sv
+Z16 FD:/lab/lab_TSC/lab2/lab_dut/instr_register.sv
+L0 9
+Z17 OE;L;6.6d;45
+Z18 o-work work -L mtiAvm -L mtiOvm -L mtiUPF
+Z19 !s100 6^c4H@z>TICN;NJ=0DO5K2
+Z20 !s105 instr_register_sv_unit
+!s85 0
+Xinstr_register_pkg
+R8
+R9
+Z21 V:JTF@fFZEAY;_aRJ`=BP83
+r1
+31
+Z22 I:JTF@fFZEAY;_aRJ`=BP83
+S1
+R7
+Z23 w1647253154
+Z24 8D:/lab/lab_TSC/lab2/lab_dut/instr_register_pkg.sv
+Z25 FD:/lab/lab_TSC/lab2/lab_dut/instr_register_pkg.sv
+L0 5
+R17
+R18
+Z26 !s100 V^fH5UCOegY6PL:OBDSV^3
+!s85 0
+vinstr_register_test
+R8
+R9
+R10
+R11
+Z27 ImjgDB4NJY]`i[[Eoza;6h3
+Z28 VEBCnBoI9@;K2I3Z?DhHY42
+S1
+R7
+Z29 w1647258825
+Z30 8D:/lab/lab_TSC/lab2/lab01_testbench-interface/instr_register_test.sv
+Z31 FD:/lab/lab_TSC/lab2/lab01_testbench-interface/instr_register_test.sv
+L0 8
+R17
+r1
+31
+R18
+Z32 !s105 instr_register_test_sv_unit
+Z33 !s100 N>HUh0Me68`m=Nf83M;=21
+!s85 0
+Ytb_ifc
+R8
+R9
+R10
+R11
+Z34 IMmG0NoGc4B[3mK9>=[n4C3
+Z35 V[2MM;6bj4cE27ld353ZQ90
+S1
+R7
+Z36 w1647256635
+Z37 8D:/lab/lab_TSC/lab2/lab01_testbench-interface/tb_ifc.sv
+Z38 FD:/lab/lab_TSC/lab2/lab01_testbench-interface/tb_ifc.sv
+L0 5
+R17
+r1
+31
+R18
+Z39 !s100 khA_Q6aOeff11VFzTC_z63
+Z40 !s105 tb_ifc_sv_unit
+!s85 0
+vtest
+Z41 IURf_MOZ]`U[oEJ70C1G3U2
+Z42 Vk<3<[f=78GX=_HO53D;7>3
+R7
+Z43 w1614777644
+Z44 8D:/lab/lab_TSC/lab2/test/test.v
+Z45 FD:/lab/lab_TSC/lab2/test/test.v
+L0 7
+R17
+r1
+31
+R18
+Z46 !s100 UMPJ7EaNf`K3CO`bPi<`Q2
+!s85 0
+vtop
+R8
+R9
+R10
+R11
+Z47 IgoQ=P`k>ziIOC0=klz<A>3
+Z48 Ve:gFW1CKLAXc^T:7k2HoD1
+S1
+R7
+Z49 w1647258610
+Z50 8D:/lab/lab_TSC/lab2/lab01_testbench-interface/top.sv
+Z51 FD:/lab/lab_TSC/lab2/lab01_testbench-interface/top.sv
+L0 5
+R17
+r1
+31
+R18
+Z52 !s100 zm;C^<KJ7d_;9olFBKQD61
+Z53 !s105 top_sv_unit
+!s85 0
