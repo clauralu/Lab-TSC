@@ -10,22 +10,25 @@ interface tb_ifc (input logic clk);
 
   // ADD CODE TO DECLARE THE INTERFACE SIGNALS
 
-  logic          load_en;
-  logic          reset_n;
-  opcode_t       opcode;
-  operand_t      operand_a, operand_b;
+  logic          load_en                    ;
+  logic          reset_n                    ;
+  opcode_t       opcode                     ;
+  operand_t      operand_a, operand_b       ;
   address_t      write_pointer, read_pointer;
-  instruction_t  instruction_word;
+  instruction_t  instruction_word           ;
 
-  clocking cb @(posedge clk);
-    inout load_en;
-    inout reset_n;
-    inout opcode;
-    inout operand_a, operand_b;
-    inout write_pointer, read_pointer;
-    inout instruction_word;
+  clocking cb @(clk);
+    output load_en                    ;
+    output reset_n                    ;
+    output opcode                     ;
+    output operand_a, operand_b       ;
+    output write_pointer, read_pointer;
+    input instruction_word           ;
   endclocking
 
-  modport TEST (clocking cb);
+  modport TEST (
+    clocking cb                   
+    );
+
 endinterface: tb_ifc
 

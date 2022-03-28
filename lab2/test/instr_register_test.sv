@@ -5,9 +5,9 @@
  * a scoreboard for self-verification.
  **********************************************************************/
 
-module instr_register_test(tb_ifc.TEST lab2_if);
+module instr_register_test
   import instr_register_pkg::*;  // user-defined types are defined in instr_register_pkg.sv
-  //(
+  (
   // input  logic          clk,
   //  output logic          load_en,
   //  output logic          reset_n,
@@ -17,9 +17,8 @@ module instr_register_test(tb_ifc.TEST lab2_if);
   //  output address_t      write_pointer,
   //  output address_t      read_pointer,
   //  input  instruction_t  instruction_word
-    //tb_ifc.TEST lab2_if
-
-  //);
+    tb_ifc.TEST lab2_if
+  );
 
   //timeunit 1ns/1ns;
 
@@ -31,34 +30,35 @@ module instr_register_test(tb_ifc.TEST lab2_if);
     $display(    "***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     ***");
     $display(    "***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***");
     $display(    "***********************************************************");
+    $display("first header");
 
     $display("\nReseting the instruction register...");
-    lab2_if.cb.write_pointer  = 5'h00;         // initialize write pointer
-    lab2_if.cb.read_pointer   = 5'h1F;         // initialize read pointer
-    lab2_if.cb.load_en        = 1'b0;          // initialize load control line
-    lab2_if.cb.reset_n       <= 1'b0;          // assert reset_n (active low)
-    repeat (2) @(lab2_if.cb) ;     // hold in reset for 2 clock cycles
-    lab2_if.cb.reset_n        = 1'b1;          // deassert reset_n (active low)
+    lab2_if.cb.write_pointer  <= 5'h00;         // initialize write pointer
+    lab2_if.cb.read_pointer   <= 5'h1F;         // initialize read pointer
+    lab2_if.cb.load_en        <= 1'b0;          // initialize load control line
+    lab2_if.cb.reset_n       <= 1'b0;          // assert reset_n (active low) 
+    repeat (2) @(posedge lab2_if.cb) ;     // hold in reset for 2 clock cycles
+    lab2_if.cb.reset_n        <= 1'b1;          // deassert reset_n (active low)
 
     $display("\nWriting values to register stack...");
-    @( lab2_if.cb) lab2_if.cb.load_en = 1'b1;  // enable writing to register
-    repeat (3) begin
-      @( lab2_if.cb) randomize_transaction;
-      @( lab2_if.cb) print_transaction;
+    @(posedge lab2_if.cb) lab2_if.cb.load_en <= 1'b1;  // enable writing to register
+    repeat (10) begin
+      @(posedge lab2_if.cb) randomize_transaction;
+      @(negedge lab2_if.cb) print_transaction; //negedge lab2_if.clk
     end
-    @( lab2_if.cb) lab2_if.cb.load_en = 1'b0;  // turn-off writing to register
+    @(posedge lab2_if.cb) lab2_if.cb.load_en <= 1'b0;  // turn-off writing to register
 
     // read back and display same three register locations
     $display("\nReading back the same register locations written...");
-    for (int i=0; i<=2; i++) begin
+    repeat (10) begin
       // later labs will replace this loop with iterating through a
       // scoreboard to determine which addresses were written and
       // the expected values to be read back
-      @( lab2_if.cb) lab2_if.cb.read_pointer = i;
-      @( lab2_if.cb) print_results;
+      @(posedge lab2_if.cb) lab2_if.cb.read_pointer <= $unsigned($random)%10;
+      @(negedge lab2_if.cb) print_results; //negedge lab2_if.clk
     end
 
-    @( lab2_if.cb) ;
+    @(posedge lab2_if.cb) ;
     $display("\n***********************************************************");
     $display(  "***  THIS IS NOT A SELF-CHECKING TESTBENCH (YET).  YOU  ***");
     $display(  "***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     ***");
@@ -90,6 +90,7 @@ module instr_register_test(tb_ifc.TEST lab2_if);
   endfunction: print_transaction
 
   function void print_results;
+    //instruction word(e o structura) e generat de dut
     $display("Read from register location %0d: ", lab2_if.cb.read_pointer);
     $display("  opcode = %0d (%s)", lab2_if.cb.instruction_word.opc, lab2_if.cb.instruction_word.opc.name);
     $display("  operand_a = %0d",   lab2_if.cb.instruction_word.op_a);
@@ -97,3 +98,6 @@ module instr_register_test(tb_ifc.TEST lab2_if);
   endfunction: print_results
 
 endmodule: instr_register_test
+
+//task poate consuma timp
+//function timp de simulare 0
