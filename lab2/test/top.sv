@@ -38,13 +38,13 @@ module top;
   // instantiate design and connect ports
   instr_register dut (
     .clk              (clk),
-    .load_en          (lab2_if.load_en),
-    .reset_n          (lab2_if.reset_n),
-    .operand_a        (lab2_if.operand_a),
-    .operand_b        (lab2_if.operand_b),
-    .opcode           (lab2_if.opcode),
-    .write_pointer    (lab2_if.write_pointer),
-    .read_pointer     (lab2_if.read_pointer),
+    .load_en          (lab2_if.load_en)         ,
+    .reset_n          (lab2_if.reset_n)         ,
+    .operand_a        (lab2_if.operand_a)       ,
+    .operand_b        (lab2_if.operand_b)       ,
+    .opcode           (lab2_if.opcode)          ,
+    .write_pointer    (lab2_if.write_pointer)   ,
+    .read_pointer     (lab2_if.read_pointer)    ,
     .instruction_word (lab2_if.instruction_word)
    );
 

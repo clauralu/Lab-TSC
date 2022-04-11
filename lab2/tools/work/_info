@@ -1,0 +1,108 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\lab\lab_TSC\lab2\tools
+vinstr_register
+Z1 Mx1 6 sv_std 3 std
+Z2 DXx6 sv_std 3 std 0 22 WnQ=;W1X^o9K1PIQTgInR3
+Z3 Mx2 4 work 18 instr_register_pkg
+Z4 DXx4 work 18 instr_register_pkg 0 22 dLhaN37=P00nZd0a=]Rz;2
+V3z9A3Eb_VM7O2iR_@`ig80
+r1
+!s85 0
+31
+IFjj0RA_5La_SOhR_NbB5d1
+S1
+Z5 dD:\lab\lab_TSC\lab2\tools
+w1648995868
+8../../lab2/dut/instr_register.sv
+F../../lab2/dut/instr_register.sv
+L0 9
+Z6 OE;L;6.6d;45
+Z7 o-sv -work work -L mtiAvm -L mtiOvm -L mtiUPF
+Z8 !s92 -sv -work work +incdir+../../dut +incdir+../../dut +incdir+../test +incdir+../test +incdir+../test -L mtiAvm -L mtiOvm -L mtiUPF
+!s100 H4B_Q?cl:aLU3zRElhT>I0
+!s105 instr_register_sv_unit
+Xinstr_register_pkg
+R1
+R2
+VdLhaN37=P00nZd0a=]Rz;2
+r1
+31
+IdLhaN37=P00nZd0a=]Rz;2
+S1
+R5
+w1648993803
+8../../lab2/dut/instr_register_pkg.sv
+F../../lab2/dut/instr_register_pkg.sv
+L0 5
+R6
+R7
+R8
+!s85 0
+!s100 YF6DVCUB;Yl[O];EHf_Pd0
+vinstr_register_test
+R1
+R2
+R3
+R4
+VEBCnBoI9@;K2I3Z?DhHY42
+r1
+31
+IXDG[>MKC^a3g?afX[60F_1
+S1
+R5
+w1649671631
+8../test/instr_register_test.sv
+F../test/instr_register_test.sv
+F../test/instr_register_class.svh
+L0 8
+R6
+R7
+R8
+!s85 0
+!s100 AcE5aCPm2iIe7?;OoWPUL3
+!s105 instr_register_test_sv_unit
+Ytb_ifc
+R1
+R2
+R3
+R4
+V[2MM;6bj4cE27ld353ZQ90
+r1
+31
+Iz`BYee99BzZi7?8zN>5>]2
+S1
+R5
+w1648993956
+8../test/tb_ifc.sv
+F../test/tb_ifc.sv
+L0 5
+R6
+R7
+R8
+!s85 0
+!s100 Dm5_TC?P?EEgbI42D0m^V3
+!s105 tb_ifc_sv_unit
+vtop
+R1
+R2
+R3
+R4
+Ve:gFW1CKLAXc^T:7k2HoD1
+r1
+31
+I05NemkdREEobkI[WeeYiI1
+S1
+R5
+w1648995990
+8../test/top.sv
+F../test/top.sv
+L0 5
+R6
+R7
+R8
+!s85 0
+!s100 Oi:=nYZ;^A0i:]Fl5QC=H3
+!s105 top_sv_unit
