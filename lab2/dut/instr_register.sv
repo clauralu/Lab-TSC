@@ -32,8 +32,13 @@ import instr_register_pkg::*;  // user-defined types are defined in instr_regist
       case (opcode)
         PASSA   : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, operand_a};
         PASSB   : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, operand_b};
-        ADD     : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a + operand_b)};
-        SUB     : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a - operand_b)};
+        
+        //ADD     : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a + operand_b)};
+        ADD     : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $unsigned(operand_a + operand_b)};
+        
+        //SUB     : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a - operand_b)};
+        SUB     : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a - operand_b - 3)};
+        
         MULT    : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a * operand_b)};
         DIV     : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a / operand_b)};
         MOD     : iw_reg[write_pointer] = '{opcode, operand_a, operand_b, $signed(operand_a % operand_b)};
